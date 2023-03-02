@@ -30,6 +30,7 @@ DOC_FILES := \
 	descriptor.md \
 	image-layout.md \
 	manifest.md \
+	artifact.md \
 	image-index.md \
 	layer.md \
 	config.md \
@@ -111,7 +112,6 @@ install.tools: $(TOOLS:%=.install.%)
 
 .install.lint:
 	case "$$(go env GOVERSION)" in \
-	go1.17.*)	go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.47.3;; \
 	go1.18.*)	go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.47.3;; \
 	*) go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest;; \
 	esac
